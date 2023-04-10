@@ -7,12 +7,16 @@ function App() {
     <div className="App">
       <div className="container">
         <div className="row">
-          <div className="col-6">
+          <div className="col-6 pt-5 px-5">
             <h1>What's the weather like in... </h1>
             <form>
-              <input type="search" />
-              <button class="button-form" type="submit">
-                <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="search" className="border border-0" />
+              <button
+                className="button-form border border-0 bg-transparent"
+                type="submit"
+                placeholder="Enter a city"
+              >
+                <i className="fa-solid fa-magnifying-glass"></i>
               </button>
             </form>
           </div>

@@ -1,0 +1,21 @@
+li {
+  list-style: none;
+}
+.city-name {
+  font-size: 2em;
+}
+.weather-main {
+  font-size: 6em;
+}
+.temp-buttons button {
+  border: none;
+  background: none;
+}
+.weather-description {
+  font-size: 1.5em;
+}
+.weather-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 1.2em;
+}
