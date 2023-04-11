@@ -7,20 +7,23 @@ function App() {
     <div className="App">
       <div className="container">
         <div className="row">
-          <div className="col-6 pt-5 px-5">
+          <div className="col-6 px-5 d-flex flex-column align-items-center justify-content-center">
             <h1>What's the weather like in... </h1>
             <form>
-              <input type="search" className="border border-0" />
+              <input
+                type="search"
+                className="border border-0 fs-5"
+                placeholder="Enter a city"
+              />
               <button
                 className="button-form border border-0 bg-transparent"
                 type="submit"
-                placeholder="Enter a city"
               >
-                <i className="fa-solid fa-magnifying-glass"></i>
+                <i className="fa-solid fa-magnifying-glass fs-5"></i>
               </button>
             </form>
           </div>
-          <div className="col-6">
+          <div className="col-6 d-flex flex-column align-items-center">
             <Weather />
           </div>
         </div>

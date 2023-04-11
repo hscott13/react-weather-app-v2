@@ -3,11 +3,11 @@ import "./Weather.css";
 
 export default function Weather() {
   return (
-    <ul className="d-flex flex-column">
-      <li className="city-name">Glasgow, GB</li>
+    <ul className="d-flex flex-column p-0 m-0">
+      <li className="city-name fw-semibold">Glasgow, GB</li>
       <li className="date">10/04/2023</li>
-      <li className="weather-main d-flex justify-content-center align-items-center">
-        5°<i className="fa-solid fa-cloud"></i>
+      <li className="weather-main d-flex py-2 justify-content-center align-items-center">
+        <i className="fa-solid fa-cloud px-3"></i>5°
         <div className="temp-buttons d-flex flex-column fs-5">
           <button>C</button>
           <button>F</button>
