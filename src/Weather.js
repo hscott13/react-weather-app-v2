@@ -1,5 +1,6 @@
 import React from "react";
 import "./Weather.css";
+import DateFormat from "./DateFormat";
 
 export default function Weather(props) {
   return (
@@ -7,7 +8,9 @@ export default function Weather(props) {
       <li className="city-name fw-semibold">
         {props.weather.city}, {props.weather.country}
       </li>
-      <li className="date">{props.date}</li>
+      <li className="date">
+        <DateFormat date={props.weather.date} />
+      </li>
       <li className="weather-main d-flex py-2 justify-content-center align-items-center">
         <i className="fa-solid fa-cloud px-3"></i>
         {Math.round(props.weather.temp)}°
@@ -19,10 +22,10 @@ export default function Weather(props) {
       <li className="weather-description">{props.weather.description}</li>
       <li>
         <div className="weather-info ">
-          <div>Feels like: {props.weather.feels}°</div>
+          <div>Feels like: {Math.round(props.weather.feels)}°</div>
           <div>Humidity: {props.weather.humidity}%</div>
           <div>Clouds: {props.weather.clouds}%</div>
-          <div>Wind Speed: {props.weather.wind}k/m</div>
+          <div>Wind Speed: {Math.round(props.weather.wind)}m/s</div>
         </div>
       </li>
     </ul>

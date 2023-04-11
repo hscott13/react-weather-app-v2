@@ -12,7 +12,7 @@ export default function App() {
       ready: true,
       city: response.data.name,
       country: response.data.sys.country,
-      date: "11/04/23",
+      date: new Date(response.data.dt * 1000),
       temp: response.data.main.temp,
       description: response.data.weather[0].main,
       feels: response.data.main.feels_like,
@@ -69,7 +69,7 @@ export default function App() {
       </div>
     );
   } else {
-    let city = "London";
+    let city = "Glasgow";
     const apiKey = "6e6ec494746b5229a9f2d526478c924c";
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(url).then(getWeather);
