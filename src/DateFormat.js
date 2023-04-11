@@ -1,4 +1,6 @@
-export default function FormatDate(props) {
+import React from "react";
+
+function FormatDate(props) {
   let hours = props.date.getHours();
   let minutes = props.date.getMinutes();
   let day = props.date.getDate();
@@ -6,3 +8,4 @@ export default function FormatDate(props) {
   let year = props.date.getFullYear();
   return `${hours}:${minutes} ${day}/${month}/${year}`;
 }
+export default FormatDate;
