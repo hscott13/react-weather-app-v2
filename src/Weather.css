@@ -9,19 +9,7 @@ li {
   line-height: 60%;
   font-weight: 500;
 }
-.temp-buttons button {
-  border: none;
-  background: none;
-  padding: 0px 10px;
-  font-size: 1.5em;
-  line-height: 125%;
-}
-.temp-buttons button:hover {
-  font-weight: 700;
-}
-.active {
-  font-weight: 700;
-}
+
 .weather-description {
   font-size: 1.5em;
   font-weight: 500;

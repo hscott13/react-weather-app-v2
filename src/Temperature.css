@@ -1,0 +1,13 @@
+.temp-buttons button {
+  border: none;
+  background: none;
+  padding: 0px 10px;
+  font-size: 1.5em;
+  line-height: 125%;
+}
+.temp-buttons button:hover {
+  font-weight: 700;
+}
+.active {
+  font-weight: 700;
+}

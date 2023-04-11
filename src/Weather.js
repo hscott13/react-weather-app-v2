@@ -2,6 +2,7 @@ import React from "react";
 import "./Weather.css";
 import DateFormat from "./DateFormat";
 import Icon from "./Icon";
+import MainTemperature from "./Temperature";
 
 export default function Weather(props) {
   return (
@@ -14,11 +15,7 @@ export default function Weather(props) {
       </li>
       <li className="weather-main d-flex py-2 justify-content-center align-items-center">
         <Icon icon={props.weather.icon} />
-        {Math.round(props.weather.temp)}°
-        <div className="temp-buttons d-flex flex-column fs-5">
-          <button className="active">C</button>
-          <button>F</button>
-        </div>
+        <MainTemperature celsius={props.weather.temp} />
       </li>
       <li className="weather-description text-capitalize">
         {props.weather.description}
