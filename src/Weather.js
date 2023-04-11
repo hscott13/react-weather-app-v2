@@ -1,6 +1,7 @@
 import React from "react";
 import "./Weather.css";
 import DateFormat from "./DateFormat";
+import Icon from "./Icon";
 
 export default function Weather(props) {
   return (
@@ -12,14 +13,16 @@ export default function Weather(props) {
         <DateFormat date={props.weather.date} />
       </li>
       <li className="weather-main d-flex py-2 justify-content-center align-items-center">
-        <i className="fa-solid fa-cloud px-3"></i>
+        <Icon icon={props.weather.icon} />
         {Math.round(props.weather.temp)}°
         <div className="temp-buttons d-flex flex-column fs-5">
           <button className="active">C</button>
           <button>F</button>
         </div>
       </li>
-      <li className="weather-description">{props.weather.description}</li>
+      <li className="weather-description text-capitalize">
+        {props.weather.description}
+      </li>
       <li>
         <div className="weather-info ">
           <div>Feels like: {Math.round(props.weather.feels)}°</div>
