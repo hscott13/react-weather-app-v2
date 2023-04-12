@@ -1,22 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Temperature.css";
 
 export default function MainTemperature(props) {
-  const [unit, setUnit] = useState("celsius");
-
   function convertToFahrenheit(event) {
     event.preventDefault();
-    setUnit("fahrenheit");
+    props.setUnit("fahrenheit");
   }
   function convertToCelsius(event) {
     event.preventDefault();
-    setUnit("celsius");
+    props.setUnit("celsius");
   }
   function fahrenheit() {
     return (props.celsius * 9) / 5 + 32;
   }
 
-  if (unit === "celsius") {
+  if (props.unit === "celsius") {
     return (
       <div className="d-flex  flex-row align-items-center">
         {Math.round(props.celsius)}°
