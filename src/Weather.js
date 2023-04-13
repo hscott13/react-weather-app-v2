@@ -20,7 +20,7 @@ export default function Weather(props) {
         <DateFormat date={props.weather.date} />
       </li>
       <li className="weather-main d-flex py-2 justify-content-center align-items-center">
-        <Icon icon={props.weather.icon} />
+        <Icon icon={props.weather.icon} size={110} />
         <MainTemperature
           unit={unit}
           setUnit={setUnit}
@@ -34,7 +34,7 @@ export default function Weather(props) {
         <div className="weather-info ">
           <div>Feels like: {feelsLike}°</div>
           <div>Humidity: {props.weather.humidity}%</div>
-          <div>Clouds: {props.weather.clouds}%</div>
+          <div>Cloud Cover: {props.weather.clouds}%</div>
           <div>Wind Speed: {Math.round(props.weather.wind)}m/s</div>
         </div>
       </li>

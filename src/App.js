@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 import Weather from "./Weather";
+import Forecast from "./Forecast";
 import axios from "axios";
+
 export default function App() {
   const [weatherData, setweatherData] = useState({ ready: false });
-  const [city, setCity] = useState("Glasgow");
+  const [city, setCity] = useState("London");
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -17,15 +19,15 @@ export default function App() {
   }
 
   function search() {
-    const apiKey = "6e6ec494746b5229a9f2d526478c924c";
+    const apiKey = "cb286bad3607984b41ed10c8de5cf00e";
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(url).then(getWeather);
   }
 
   function getWeather(response) {
-    console.log(response);
     setweatherData({
       ready: true,
+      coord: response.data.coord,
       city: response.data.name,
       country: response.data.sys.country,
       date: new Date(response.data.dt * 1000),
@@ -65,6 +67,7 @@ export default function App() {
               <Weather weather={weatherData} />
             </div>
           </div>
+          <Forecast coords={weatherData.coord} />
         </div>
         <div>
           Open-sourced on{" "}
