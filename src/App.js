@@ -7,7 +7,7 @@ import axios from "axios";
 
 export default function App() {
   const [weatherData, setweatherData] = useState({ ready: false });
-  const [city, setCity] = useState("London");
+  const [city, setCity] = useState("Glasgow");
 
   function handleSubmit(event) {
     event.preventDefault();
